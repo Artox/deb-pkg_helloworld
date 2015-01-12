@@ -1,0 +1,5 @@
+kernel-cubox-i (3.14.14.1414094154-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Josua Mayer <privacy@not.given>  Mon, 12 Jan 2015 18:11:37 +0100
