@@ -1,4 +1,4 @@
-kernel-cubox-i (3.14.14.1414094154-1) unstable; urgency=low
+helloworld (1.0) unstable; urgency=low
 
   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
 

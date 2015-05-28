@@ -1,11 +1,12 @@
 CC ?= gcc
 PREFIX ?= /usr
 DESTDIR ?= /
+CFLAGS=$(shell pkg-config --cflags egl)
 
 all: helloworld
 
 helloworld: helloworld.c
-	$(CC) -o $@ $<
+	$(CC) $(CFLAGS) -o $@ $<
 
 clean:
 	rm -f helloworld
