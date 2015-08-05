@@ -4,8 +4,6 @@ Priority: extra
 Maintainer: Josua Mayer <privacy@not.given>
 Build-Depends:
  debhelper (>= 8.0.0),
- pkg-config,
- libegl1-dev [any-arm] | libegl1-mesa-dev [any-arm],
 Standards-Version: 3.9.3
 Homepage: <insert the upstream URL, if relevant>
 
