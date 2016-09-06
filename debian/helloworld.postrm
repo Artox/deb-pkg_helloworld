@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set +e
+
+case $1 in
+	remove|upgrade|disappear)
+	update-initramfs -k 4.4.15-clearfog -u
+	;;
+
+	purge|failed-upgrade|abort-install|abort-upgrade)
+	;;
+
+	*)
+	echo "postrm called with unknown argument \"$1\"" >&2
+	exit 1
+	;;
+esac
+
+#DEBHELPER#
+
+exit 0
