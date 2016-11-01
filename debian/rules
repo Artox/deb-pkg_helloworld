@@ -14,11 +14,15 @@ include /usr/share/dpkg/buildflags.mk
 
 include /usr/share/dpkg/architecture.mk
 
+# extract parallel make arg
+PARALLEL=$(shell $(CURDIR)/parse-debopts.sh $(DEB_BUILD_OPTIONS))
+
 # cross-compile friendly
-CC := $(DEB_HOST_GNU_TYPE)-$(CC)
 
 %:
 	dh $@ 
 
 override_dh_auto_build:
-	$(MAKE) CC=$(CC) CFLAGS="$(CFLAGS)"
+	echo "PARALLEL=$(PARALLEL)"
+	$(MAKE) -j$(PARALLEL) CFLAGS="$(CFLAGS)"
+	#printenv
